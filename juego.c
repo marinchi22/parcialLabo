@@ -6,7 +6,7 @@
 
 void mostrarJuegos(eJuego juegos[], int tam)
 {
-    printf(" Id   Descripcion\n\n");
+    printf("    Id      Descripcion   Precio  \n\n");
     for(int i=0; i < tam; i++)
     {
         mostrarJuego( juegos[i]);
@@ -16,8 +16,7 @@ void mostrarJuegos(eJuego juegos[], int tam)
 
 void mostrarJuego(eJuego juego)
 {
-
-    printf("  %d      %10s\n", juego.id,juego.descripcion);
+    printf("  %d      %10s     %3.2f\n", juego.id, juego.descripcion, juego.precio);
 
 }
 int cargarDescJuegos(int id, eJuego juegos[], int tam, char desc[])

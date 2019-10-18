@@ -244,7 +244,7 @@ int bajaCliente(eCliente vec[], int tam, eJuego juegos[], int tamJ)
         }
         else
         {
-            printf("Se ha cancelado la operacion");
+            printf("Se ha cancelado la operacion\n");
         }
     }
 

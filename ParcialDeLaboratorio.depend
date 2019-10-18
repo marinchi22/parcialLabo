@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1571108134 source:c:\users\migue\desktop\todo\parcialdelaboratorio\main.c
+1571377822 source:c:\users\migue\desktop\todo\parcialdelaboratorio\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -7,7 +7,7 @@
 	"cliente.h"
 	"juego.h"
 
-1571114950 source:c:\users\migue\desktop\todo\parcialdelaboratorio\juego.c
+1571378346 source:c:\users\migue\desktop\todo\parcialdelaboratorio\juego.c
 	"juego.h"
 	<stdio.h>
 	<stdlib.h>
@@ -15,7 +15,7 @@
 
 1571114635 c:\users\migue\desktop\todo\parcialdelaboratorio\juego.h
 
-1571114954 source:c:\users\migue\desktop\todo\parcialdelaboratorio\cliente.c
+1571377179 source:c:\users\migue\desktop\todo\parcialdelaboratorio\cliente.c
 	"cliente.h"
 	<stdio.h>
 	<stdlib.h>
