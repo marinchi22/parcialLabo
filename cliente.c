@@ -7,7 +7,7 @@ void mostrarCliente(eCliente x, eJuego juegos[], int tam)
 {
     char descJuegos[20];
 
-    cargarDescJuegos(x.idJuego, juegos, tam, descJuegos);
+    cargarDescJuegos(x.catPreferedida, juegos, tam, descJuegos);
     printf("  %d  %10s   %15s      %15s     %10d       %c            %02d/%02d/%d   %10s\n",
            x.codigo,
            x.nombre,
@@ -29,7 +29,7 @@ void mostrarClientes(eCliente vec[], int tam,  eJuego juegos[], int tamJ)
     int flag = 0;
     system("cls");
 
-    printf(" Cod     Nombre           Apellido         Direccion        Telefono      sexo          FInscripcion    Tipo de juego\n\n");
+    printf(" Cod     Nombre           Apellido         Direccion        Telefono      sexo          FInscripcion    Cat. Preferida\n\n");
 
     for(int i=0; i < tam; i++)
     {
@@ -57,7 +57,7 @@ int altaCliente(eCliente vec[], int tam, int cod, eJuego juegos[], int tamC)
     char direccion[20];
     int telefono;
     char sexo;
-    int idJuego;
+    int catPreferedida;
     eFecha fecha;
 
     system("cls");
@@ -101,14 +101,14 @@ int altaCliente(eCliente vec[], int tam, int cod, eJuego juegos[], int tamC)
         fflush(stdin);
         scanf("%d",&telefono);
 
-        printf("Ingrese fecha de alquiler: ");
+        printf("Ingrese fecha de Inscripcion: ");
         scanf("%d/%d/%d", &fecha.dia, &fecha.mes, &fecha.anio);
 
         mostrarJuegos(juegos, tam);
-        printf("Ingrese id juego: ");
-        scanf("%d", &idJuego);
+        printf("Ingrese Categoria Preferida: ");
+        scanf("%d", &catPreferedida);
 
-        vec[indice] = newCliente(cod, nombre,apellido,direccion,telefono, sexo, fecha, idJuego);
+        vec[indice] = newCliente(cod, nombre,apellido,direccion,telefono, sexo, fecha, catPreferedida);
         todoOk = 1;
         printf("Alta exitosa!!\n\n");
     }
@@ -124,7 +124,7 @@ eCliente newCliente(
     int telefono,
     char sexo,
     eFecha fecha,
-    int idJuego
+    int catPreferedida
 )
 {
 
@@ -136,7 +136,7 @@ eCliente newCliente(
     cl.telefono=telefono;
     cl.sexo = sexo;
     cl.fechaInscripcion = fecha;
-    cl.idJuego = idJuego;
+    cl.catPreferedida = catPreferedida;
     cl.isEmpty = 0;
 
     return cl;
@@ -184,17 +184,17 @@ int harcodearClientes( eCliente vec[], int tam, int cantidad)
 
     eCliente suplentes[]=
     {
-        { 0, "Juan","Perez","Calle 834 109", 'm',  {12, 5, 2015}, 42005421, 1002, 0},
-        { 1, "Alberto","Niño","Calle 845 541",'m', {12, 5, 2019}, 52172900,1001, 0},
-        { 2, "Ana","Echazarreta","Viamonte 345",'f', {2, 7, 2018}, 42372961,1002, 0},
-        { 3, "Luis","Bidone","Montevideo 123",'m', {21, 5, 2018}, 42376129,1000, 0},
-        { 4, "Roberto","Cordoba","Maipu 272",'f', {11, 9, 2017}, 42132900,1001, 0},
-        { 5, "Diego","Franco","Cuelli 3231",'m', {12, 4, 2014}, 42171613,1000, 0},
-        { 6, "Marina","Montiel","Rivadavia 234",'f', {12, 2, 2014}, 1159615196,1002, 0},
-        { 7, "Clara","Molina","Monteverde 973",'f', {28, 8, 2018}, 1160161247,1001, 0},
-        { 8, "Mauro","Zarate","Martin Rodriguez 33",'m', {23, 3, 2015}, 1169061247,1001, 0},
-        { 9, "Daniela","Herrero","Callao 987",'f', {10, 10, 2016}, 52172913,1000, 0},
-        { 10, "Agustin","Canapino","Almafuerte 330",'m', {1, 7, 2017}, 42210041,1002, 0},
+        { 0, "Juan","Perez","Calle 834 109", 'm',  {12, 5, 2015}, 42005421, 1, 0},
+        { 1, "Alberto","Niño","Calle 845 541",'m', {12, 5, 2019}, 52172900,2, 0},
+        { 2, "Ana","Echazarreta","Viamonte 345",'f', {2, 7, 2018}, 42372961,3, 0},
+        { 3, "Luis","Bidone","Montevideo 123",'m', {21, 5, 2018}, 42376129,5, 0},
+        { 4, "Roberto","Cordoba","Maipu 272",'f', {11, 9, 2017}, 42132900,5, 0},
+        { 5, "Diego","Franco","Cuelli 3231",'m', {12, 4, 2014}, 42171613,3, 0},
+        { 6, "Marina","Montiel","Rivadavia 234",'f', {12, 2, 2014}, 1159615196,4, 0},
+        { 7, "Clara","Molina","Monteverde 973",'f', {28, 8, 2018}, 1160161247,1, 0},
+        { 8, "Mauro","Zarate","ALvarez T 33",'m', {23, 3, 2015}, 1169061247,2, 0},
+        { 9, "Daniela","Herrero","Callao 987",'f', {10, 10, 2016}, 52172913,4, 0},
+        { 10, "Agustin","Canapino","Almafuerte 330",'m', {1, 7, 2017}, 42210041,2, 0},
     };
 
     if( cantidad <= 10 && tam >= cantidad)

@@ -24,3 +24,37 @@
 1571114842 c:\users\migue\desktop\todo\parcialdelaboratorio\cliente.h
 	"juego.h"
 
+1571629924 source:c:\users\migue\desktop\parciallabo-master\cliente.c
+	"cliente.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1571629652 c:\users\migue\desktop\parciallabo-master\cliente.h
+	"juego.h"
+
+1571355256 c:\users\migue\desktop\parciallabo-master\juego.h
+
+1571355256 source:c:\users\migue\desktop\parciallabo-master\juego.c
+	"juego.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1571622168 source:c:\users\migue\desktop\parciallabo-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"cliente.h"
+	"juego.h"
+	"categoria.h"
+
+1571631596 c:\users\migue\desktop\parciallabo-master\categoria.h
+
+1571631898 source:c:\users\migue\desktop\parciallabo-master\categoria.c
+	"categoria.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

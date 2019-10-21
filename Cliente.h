@@ -20,7 +20,7 @@ typedef struct
     char sexo;
     eFecha fechaInscripcion;
     int telefono;
-    int idJuego;
+    int catPreferedida;
     int isEmpty;
 } eCliente;
 
@@ -34,7 +34,7 @@ void mostrarClientes(eCliente vec[], int tam, eJuego juegos[], int tamJ);
 int buscarLibre(eCliente vec[], int tam);
 int buscarCliente(int codigo, eCliente vec[], int tam);
 int altaCliente(eCliente vec[], int tam, int codigo, eJuego juegos[], int tamC);
-eCliente newCliente(int leg,char nombre[],char apellido[],char direccion[],int telefono, char sexo, eFecha fecha, int idjuego);
+eCliente newCliente(int leg,char nombre[],char apellido[],char direccion[],int telefono, char sexo, eFecha fecha, int catPreferedida);
 int harcodearClientes( eCliente vec[], int tam, int cantidad);
 int bajaCliente(eCliente vec[], int tam, eJuego juegos[], int tamJ);
 int modificarCliente(eCliente vec[], int tam, eJuego juegos[], int tamJ);
